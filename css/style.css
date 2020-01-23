@@ -36,6 +36,22 @@
   display: flex;
 }
 
+.notify {
+  display: flex;
+  background-color: green;
+}
+
+.icon_left {
+  line-height: 35px;
+}
+
+.search {
+  display: flex;
+  background-color: white;
+  border: 1px solid black;
+  margin: 3px;
+}
+
 .window {
   width: 70%;
   height: 100%;
