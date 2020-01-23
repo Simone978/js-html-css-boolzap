@@ -1,0 +1,33 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* utilities */
+
+
+
+
+
+.wrapper {
+  display: flex;
+  width: 70%;
+  height: 90vh;
+  margin: auto;
+  background-color: grey;
+  margin-top: calc(10vh / 2);
+}
+
+.list {
+  width: 30%;
+  height: 100%;
+  background-color: red;
+}
+
+.window {
+  width: 70%;
+  height: 100%;
+  background-color: brown;
+}
