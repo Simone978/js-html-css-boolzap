@@ -26,6 +26,16 @@
   background-color: red;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: yellow;
+  padding: 10px;
+}
+.header_right {
+  display: flex;
+}
+
 .window {
   width: 70%;
   height: 100%;
