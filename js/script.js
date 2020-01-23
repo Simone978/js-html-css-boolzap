@@ -6,7 +6,7 @@ $('document').ready(function(){
           var text = $('#insert_someth').val();
           var elementNew = $('.template p').clone();
           elementNew.append(text);
-          $('.window_body').append(elementNew);
+          $('.column_right').append(elementNew);
         }
       }
     );

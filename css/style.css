@@ -104,9 +104,15 @@ body {
   overflow: hidden;
 }
 .window_body {
+  display: flex;
   height: 800px;
+  overflow-y: scroll;
   border-right: 10px solid white;
   background-color: #E4DCD3;
+}
+
+.column_right, .column_left {
+  width: 50%;
 }
 .window_footer {
   display: flex;
@@ -130,9 +136,16 @@ body {
 .template {
   display: none;
 }
-.window_body p{
+.right_element{
+  float: right;
   display: inline-block;
   background-color: white;
   padding: 20px 40px;
   border-radius: 5px;
+  margin: 20px;
+}
+.right_element:after{
+  content: "";
+  display: table;
+  clear: both;
 }
