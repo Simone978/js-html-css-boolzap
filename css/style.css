@@ -9,24 +9,25 @@
 
 
 
-
 body {
+  display: flex;
+  align-items: center;
   background-color: #DBDBD3;
-  overflow-y:scroll;
+  width: 100%;
+  height: 100vh;
 }
 
 .wrapper {
   display: flex;
   width: 70%;
-  height: 90vh;
+  height: 90%;
   margin: auto;
 
-  margin-top: calc(10vh / 2);
 }
 
 .list {
   width: 30%;
-  /* height: 100%; */
+  height: 100%;
   overflow: hidden;
   background-color: white;
 }
@@ -63,9 +64,17 @@ body {
 
 .search {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
   background-color: white;
   border: 1px solid lightgrey;
   margin: 3px;
+}
+
+input.search-name {
+  border: 0;
+  width: 60%;
 }
 
 .discussion_list {
@@ -101,11 +110,11 @@ body {
   display: flex;
   flex-direction: column;
   width: 70%;
+  height: 100%;
   overflow: hidden;
 }
 .window_body {
-  display: flex;
-  height: 800px;
+  height: calc(100% - 140px);
   overflow-y: scroll;
   border-right: 10px solid white;
   background-color: #E4DCD3;
@@ -119,7 +128,7 @@ body {
   align-self: flex-end;
   align-items: center;
   justify-content: space-around;
-  height: 20%;
+  height: 100px;
   background-color: #F3EEEA;
   width: 100%;
 }
@@ -136,16 +145,23 @@ body {
 .template {
   display: none;
 }
-.right_element{
+.sent {
   float: right;
-  display: inline-block;
-  background-color: white;
-  padding: 20px 40px;
-  border-radius: 5px;
-  margin: 20px;
-}
-.right_element:after{
-  content: "";
-  display: table;
   clear: both;
+  background-color: white;
+}
+.receive {
+  float: left;
+  clear: both;
+  background-color: green;
+}
+.message{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 30%;
+  max-width: 60%;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 20px;
 }

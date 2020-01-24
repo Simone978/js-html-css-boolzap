@@ -1,14 +1,15 @@
 $('document').ready(function(){
 
-  $('#insert_someth').keypress(
-      function (event) {
-        if(event.which == 13 || event.keyCode == 13) {
+  $('.clicca').click(function(){
           var text = $('#insert_someth').val();
-          var elementNew = $('.template p').clone();
-          elementNew.append(text);
-          $('.column_right').append(elementNew);
+          if(text != 0){
+            var elementNew = $('.template .message').clone();
+            console.log(elementNew);
+            $('.window_body').append(elementNew);
+            elementNew.addClass('receive');
+            elementNew.find('.text p').append(text);
+          }
         }
-      }
     );
 
 });
