@@ -7,6 +7,12 @@
 
 /* utilities */
 
+.active_name {
+  display: block;
+}
+.active_name_off {
+  display: none;
+}
 
 
 body {
