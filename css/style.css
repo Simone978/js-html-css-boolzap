@@ -11,7 +11,10 @@
   display: block;
 }
 .active_name_off {
-  display: none;
+  display: none!important;
+}
+.color {
+  background-color: yellow;
 }
 
 

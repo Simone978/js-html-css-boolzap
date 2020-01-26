@@ -1,5 +1,6 @@
 $('document').ready(function(){
 
+// funzione che al click inserisce un messaggio nella conversazione. Nella callback ricevo un messaggio di ritorno
   $('.clicca').click(function(){
     var text = $('#insert_someth').val();
     if(text != 0){
@@ -13,7 +14,7 @@ $('document').ready(function(){
     }, 1000);
   }
 );
-
+// funzione di callback per il messaggio di ritorno
   function ciao(){
     var textReceive = 'ciao';
     var elementNew = $('.template .message').clone();
@@ -21,24 +22,15 @@ $('document').ready(function(){
     elementNew.addClass('receive');
     elementNew.find('.text p').append(textReceive);
   }
-
+// funzione ricerca tra i nomi dei contatti
   $('.search_click').click(function(){
     var search = $('.search-name').val().toLowerCase();
     var name = $('.name p:first-child').text().toLowerCase();
-    var cond = true;
-    var i = 0;
-    var nameArray = $('.name p:first-child');
-    var nameInclude = name.includes(search);
-    for (var i = 0; i < nameArray.length - 1; i++) {
-      console.log(nameArray[i]);
+    var container = $("p.username:contains(" + search + ")");
+    $('.discussion_profile').addClass('active_name_off');
+    container.parent().parent().parent().removeClass('active_name_off');
 
-    if(nameInclude){
-      console.log(i);
-    }else {
-      console.log('non esiste');
-    }
-  }
 
   });
-  
+
 });
