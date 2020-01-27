@@ -126,6 +126,10 @@ input.search-name {
   justify-content: space-between;
 }
 
+.username {
+  text-transform: lowercase;
+}
+
 .window {
   display: flex;
   flex-direction: column;
@@ -134,10 +138,14 @@ input.search-name {
   overflow: hidden;
 }
 .window_body {
+  display: none;
   height: calc(100% - 140px);
   overflow-y: scroll;
   border-right: 10px solid white;
   background-color: #E4DCD3;
+}
+.active {
+  display: block;
 }
 
 .column_right, .column_left {

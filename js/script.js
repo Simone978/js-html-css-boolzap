@@ -28,9 +28,7 @@ $('document').ready(function(){
     var name = $('.name p:first-child').text().toLowerCase();
     var container = $("p.username:contains(" + search + ")");
     $('.discussion_profile').addClass('active_name_off');
-    container.parent().parent().parent().removeClass('active_name_off');
-
-
+    container.parents('.discussion_profile').removeClass('active_name_off');
   });
 
 });
