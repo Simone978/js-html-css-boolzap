@@ -184,6 +184,7 @@ input.search-name {
   background-color: green;
 }
 .message{
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -192,4 +193,20 @@ input.search-name {
   border-radius: 5px;
   padding: 5px;
   margin: 20px;
+}
+
+
+.hidden_menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  text-align: center;
+  box-shadow: -1px 2px 14px 0px rgba(0,0,0,0.75);
+  padding: 5px;
+}
+.hidden_menu p{
+  cursor: pointer;
 }

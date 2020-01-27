@@ -40,5 +40,10 @@ $('document').ready(function(){
     })
 
   });
+$(document).on('click','.delete', function(){
+  $(this).parents('.message').remove();
+});
+
+
 
 });
