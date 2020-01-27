@@ -5,8 +5,7 @@ $('document').ready(function(){
     var text = $('#insert_someth').val();
     if(text != 0){
       var elementNew = $('.template .message').clone();
-      console.log(elementNew);
-      $('.window_body').append(elementNew);
+      $('.window_body.active').append(elementNew);
       elementNew.addClass('sent');
       elementNew.find('.text p').append(text);
     } setTimeout(function(){
@@ -18,7 +17,7 @@ $('document').ready(function(){
   function ciao(){
     var textReceive = 'ciao';
     var elementNew = $('.template .message').clone();
-    $('.window_body').append(elementNew);
+    $('.window_body.active').append(elementNew);
     elementNew.addClass('receive');
     elementNew.find('.text p').append(textReceive);
   }
@@ -29,6 +28,17 @@ $('document').ready(function(){
     var container = $("p.username:contains(" + search + ")");
     $('.discussion_profile').addClass('active_name_off');
     container.parents('.discussion_profile').removeClass('active_name_off');
+  });
+
+  $('.discussion_profile').click(function(){
+    var discussionNumber = $(this).attr('data-contact');
+    $('.window_body').each(function(){
+      if($(this).attr('data-contact')==discussionNumber){
+        $('.window_body').removeClass('active');
+        $(this).addClass('active');
+      }
+    })
+
   });
 
 });
