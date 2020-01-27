@@ -40,9 +40,16 @@ $('document').ready(function(){
     })
 
   });
-$(document).on('click','.delete', function(){
-  $(this).parents('.message').remove();
-});
+
+
+  $(document).on('click','.hidden_elements', function(){
+    $(this).parent().siblings('.hidden_menu').show();
+  });
+
+  $(document).on('click','.delete', function(){
+    $(this).parent().parent().remove();
+
+  });
 
 
 
