@@ -13,9 +13,7 @@
 .active_name_off {
   display: none!important;
 }
-.color {
-  background-color: yellow;
-}
+
 
 
 body {
@@ -97,6 +95,9 @@ input.search-name {
   height: 25px;
 }
 
+.discussion_profile:hover {
+  background-color: lightgrey;
+}
 .discussion_list {
   height: calc(100% - 190px);
   overflow-Y: scroll;

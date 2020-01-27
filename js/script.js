@@ -22,7 +22,7 @@ $('document').ready(function(){
     elementNew.find('.text p').append(textReceive);
   }
 // funzione ricerca tra i nomi dei contatti
-  $('.search_click').click(function(){
+  $('.search input').keyup(function(){
     var search = $('.search-name').val().toLowerCase();
     var name = $('.name p:first-child').text().toLowerCase();
     var container = $("p.username:contains(" + search + ")");
@@ -30,7 +30,7 @@ $('document').ready(function(){
     container.parents('.discussion_profile').removeClass('active_name_off');
   });
 
-  $('.discussion_profile').click(function(){
+  $('.discussion_profile').click(function(){;
     var discussionNumber = $(this).attr('data-contact');
     $('.window_body').each(function(){
       if($(this).attr('data-contact')==discussionNumber){
