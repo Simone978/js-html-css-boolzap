@@ -1,11 +1,26 @@
 $('document').ready(function(){
 
 // funzione che al click inserisce un messaggio nella conversazione. Nella callback ricevo un messaggio di ritorno
-  $('.clicca').click(function(){
-    message(), setTimeout(function(){
-      ciao();
-    }, 1000);
+  $('.window_footer input').keydown(function(event){
+    if(event.which == 13){
+      message(), setTimeout(function(){
+        ciao();
+      }, 1000);
+    }
   }
+);
+// $('.send-message').keypress(function(event) {
+//     if(event.which == 13) {
+//       sendMessage();
+//     }
+//   });
+
+
+$('.clicca').click(function(){
+  message(), setTimeout(function(){
+    ciao();
+  }, 1000);
+}
 );
 
 // funzione ricerca tra i nomi dei contatti
