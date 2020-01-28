@@ -25,7 +25,7 @@ $('document').ready(function(){
   });
 
   $(document).on('click','.hidden_elements', function(){
-    $(this).parent().siblings('.hidden_menu').show();
+    $(this).parent().siblings('.hidden_menu').toggle();
   });
 
   $(document).on('click','.delete', function(){
