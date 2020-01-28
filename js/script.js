@@ -61,6 +61,7 @@ $('.clicca').click(function(){
       $('.window_body.active').append(elementNew);
       elementNew.addClass('sent');
       elementNew.find('.text p').append(text);
+      scrollMessage();
     };
   };
 // funzione di callback per il messaggio di ritorno
@@ -70,9 +71,10 @@ $('.clicca').click(function(){
     $('.window_body.active').append(elementNew);
     elementNew.addClass('receive');
     elementNew.find('.text p').append(textReceive);
+    scrollMessage();
   };
 
-
+// funzione ricerca tra le discussioni
   function search(){
     var search = $('.search-name').val().toLowerCase();
     var name = $('.name p:first-child').text().toLowerCase();
@@ -80,3 +82,10 @@ $('.clicca').click(function(){
     $('.discussion_profile').addClass('active_name_off');
     container.parents('.discussion_profile').removeClass('active_name_off');
   }
+
+  // funzione che scrolla
+function scrollMessage() {
+  var heightContainer = $('.window_body.active').height();
+  console.log(heightContainer);
+  $('.window_body').scrollTop(heightContainer);
+}
