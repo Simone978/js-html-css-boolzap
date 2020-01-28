@@ -24,6 +24,10 @@ $('document').ready(function(){
     })
   });
 
+  $('.window_footer input').focus(function(){
+    $('.window_footer .icon').removeClass('fa-microphone').addClass('fa-paper-plane');
+  });
+
   $(document).on('click','.hidden_elements', function(){
     $(this).parent().siblings('.hidden_menu').toggle();
   });
