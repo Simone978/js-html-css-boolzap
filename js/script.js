@@ -24,10 +24,13 @@ $('.clicca').click(function(){
 
   // funzione per passare da una discussione all'altra senza perdere i contenuti
   $('.discussion_profile').click(function(){
+    // inserisco nome e foto nell'header
     var name = $(this).find('.username').text();
     var img = $(this).find('.icon_left img').attr('src');
     $('.window_wrapper').children('img').attr('src',''+img+'');
     $('.window_wrapper').find('.name').text(''+ name +'');
+    
+    // passo da una discussione all'altra senza perdere i contenuti
     var discussionNumber = $(this).attr('data-contact');
     $('.window_body').each(function(){
       if($(this).attr('data-contact')==discussionNumber){

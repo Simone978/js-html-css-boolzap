@@ -7,12 +7,6 @@
 
 /* utilities */
 
-.active_name {
-  display: block;
-}
-.active_name_off {
-  display: none!important;
-}
 
 
 
@@ -211,4 +205,8 @@ input.search-name {
 }
 .hidden_menu p, .hidden_elements{
   cursor: pointer;
+}
+
+.active_name_off {
+  display: none;
 }
