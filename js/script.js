@@ -9,12 +9,6 @@ $('document').ready(function(){
     }
   }
 );
-// $('.send-message').keypress(function(event) {
-//     if(event.which == 13) {
-//       sendMessage();
-//     }
-//   });
-
 
 $('.clicca').click(function(){
   message(), setTimeout(function(){
@@ -30,6 +24,10 @@ $('.clicca').click(function(){
 
   // funzione per passare da una discussione all'altra senza perdere i contenuti
   $('.discussion_profile').click(function(){
+    var name = $(this).find('.username').text();
+    var img = $(this).find('.icon_left img').attr('src');
+    $('.window_wrapper').children('img').attr('src',''+img+'');
+    $('.window_wrapper').find('.name').text(''+ name +'');
     var discussionNumber = $(this).attr('data-contact');
     $('.window_body').each(function(){
       if($(this).attr('data-contact')==discussionNumber){
@@ -38,6 +36,8 @@ $('.clicca').click(function(){
       }
     })
   });
+
+
 
   $('.window_footer input').focus(function(){
     $('.window_footer .icon').removeClass('fa-microphone').addClass('fa-paper-plane');
@@ -64,6 +64,7 @@ $('.clicca').click(function(){
       scrollMessage();
     };
   };
+
 // funzione di callback per il messaggio di ritorno
   function ciao(){
     var textReceive = 'ciao';
@@ -84,8 +85,8 @@ $('.clicca').click(function(){
   }
 
   // funzione che scrolla
-function scrollMessage() {
-  var heightContainer = $('.window_body.active').height();
-  console.log(heightContainer);
-  $('.window_body').scrollTop(heightContainer);
-}
+  function scrollMessage() {
+    var heightContainer = $('.window_body.active').height();
+    console.log(heightContainer);
+    $('.window_body').scrollTop(heightContainer);
+  }
