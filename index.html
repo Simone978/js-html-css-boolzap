@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
-    <title></title>
+    <title>Boolzap</title>
   </head>
   <body>
     <div class="top_header">
@@ -12,6 +13,8 @@
     </div>
 
     <div class="wrapper">
+      <!-- colonna sinistra -->
+
       <div class="list">
         <div class="header">
           <div class="header_left">
@@ -23,14 +26,12 @@
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
-
-
         <div class="notify standard_block">
           <div class="icon_left">
             <i class="fas fa-bell-slash"></i>
           </div>
           <div class="icon_text">
-            <p>Ricevi notifiche di nuovi messaggi</p>
+            <p class= "bold">Ricevi notifiche di nuovi messaggi</p>
             <a href="#">Attiva notifiche desktop</a>
           </div>
         </div>
@@ -38,6 +39,7 @@
           <i class="fas fa-search search_click"></i>
           <input type="text" class="search-name" placeholder='cerca'>
         </div>
+
         <!-- sezione lista discussioni -->
         <ul class="discussion_list">
           <li class="discussion_profile standard_block" data-contact='0'>
@@ -90,7 +92,7 @@
           </li>
           <li class="discussion_profile standard_block" data-contact='4'>
             <div class="icon_left">
-              <img src="img\commissar_avatar.png" alt="">
+              <img src="img/commissar_avatar.png" alt="">
             </div>
             <div class="icon_text">
               <div class="name">
@@ -124,25 +126,30 @@
               <p>non poteva essere altrimenti</p>
             </div>
           </li>
+          <!-- /sezione lista discussioni -->
         </ul>
       </div>
+      <!-- /colonna sinistra -->
+
+      <!-- colonna destra -->
       <div class="window">
         <div class="header">
           <div class="header_left window_wrapper">
               <img src="img/boy_2.png" alt="">
               <div class="icon_text">
                 <div class="name">
-                  <p>Andrea</p>
+                  <p class='name_header'>Andrea</p>
                 </div>
-                <p>ultimo accesso oggi alle 13.30</p>
+                <p class=date_header>ultimo accesso oggi alle 13.30</p>
               </div>
           </div>
           <div class="header_right">
-            <i class="fas fa-circle-notch"></i>
-            <i class="fas fa-comment-alt"></i>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-paperclip"></i>
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
+        <!-- corpo colonna destra -->
         <div class="window_body active" data-contact='0'></div>
         <div class="window_body" data-contact='1'></div>
         <div class="window_body" data-contact='2'></div>
@@ -150,14 +157,19 @@
         <div class="window_body" data-contact='4'></div>
         <div class="window_body" data-contact='5'></div>
         <div class="window_body" data-contact='6'></div>
+        <!-- /corpo colonna destra -->
 
+        <!-- footer colonna destra -->
         <div class="window_footer">
           <i class="far fa-smile"></i>
-          <input id="insert_someth" type="text" name="" placeholder="Scrivi un messaggio" value="">
+          <input id="insert_someth" type="text" name="insert" placeholder="Scrivi un messaggio">
           <i class=" icon fas fa-microphone clicca"></i>
         </div>
-
+        <!-- /footer colonna destra -->
       </div>
+      <!-- /colonna destra -->
+
+      <!-- elemento nascosto da clonare -->
       <div class="template">
         <div class="message">
           <div class="text">
@@ -173,6 +185,8 @@
           </div>
         </div>
       </div>
+      <!-- /elemento nascosto da clonare -->
+
     </div>
 
 

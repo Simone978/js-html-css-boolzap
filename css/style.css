@@ -4,18 +4,23 @@
   margin: 0;
 }
 
-
-/* utilities */
-
-
-
-
 body {
   display: flex;
   align-items: center;
   background-color: #DBDBD3;
   width: 100%;
   height: 100vh;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+/* typo */
+
+.bold {
+  font-weight: bold;
+}
+a {
+  color: #5B889C;
 }
 
 .top_header {
@@ -33,9 +38,9 @@ body {
   height: 90%;
   margin: auto;
   z-index: 1;
-
 }
 
+/* colonna sinistra */
 .list {
   width: 30%;
   height: 100%;
@@ -120,11 +125,22 @@ input.search-name {
   display: flex;
   justify-content: space-between;
 }
+.username{
+  font-size: 1.1em;
+}
+.name p:last-child{
+  font-size: 0.6em;
+}
+
+.icon_text p:last-child{
+  color: #C1C4C5;
+}
 
 .username {
   text-transform: lowercase;
 }
 
+/* colonna destra */
 .window {
   display: flex;
   flex-direction: column;
@@ -132,6 +148,16 @@ input.search-name {
   height: 100%;
   overflow: hidden;
 }
+
+.name p.name_header {
+  color: black;
+  font-size: 1.1em;
+}
+p.date_header {
+  color: #6E7678;
+
+}
+
 .window_body {
   display: none;
   height: calc(100% - 140px);
@@ -143,9 +169,6 @@ input.search-name {
   display: block;
 }
 
-.column_right, .column_left {
-  width: 50%;
-}
 .window_footer {
   display: flex;
   align-self: flex-end;
@@ -165,6 +188,7 @@ input.search-name {
   color: #B1B1B1;
 }
 
+/* elemento clone */
 .template {
   display: none;
 }
@@ -190,7 +214,7 @@ input.search-name {
   margin: 20px;
 }
 
-
+/* dropdown */
 .hidden_menu {
   display: none;
   position: absolute;
